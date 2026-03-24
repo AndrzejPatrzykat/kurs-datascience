@@ -23,3 +23,35 @@ print(kwadraty_zad9_bis)
 print(f"\nNIEPARZYSTE PO POPRAWCE")
 kwadraty_zad9_bis = {j: k for j, k in kwadraty_zad9_bis.items() if j % 2 ==0}
 print(kwadraty_zad9_bis)
+
+
+
+# Zadanie 9
+# Masz słownik mapujący nazwy produktów na kategorie: {'laptop': 'elektronika',
+# 'klawiatura': 'elektronika', 'krzesło': 'meble', 'biurko': 'meble'} . Stwórz
+# odwrotny słownik gdzie klucze to kategorie, a wartości to listy produktów.
+# Wymagania:
+# Oczekiwany wynik:
+# (średnie)
+# Iteruj po oryginalnym słowniku
+# Zgrupuj produkty według kategorii
+# Wynik: {'elektronika': ['laptop', 'klawiatura'], 'meble': [...]}
+# Słownik kategoria: lista_produktów
+
+
+
+produkty = {
+    'laptop': 'elektronika',
+    'klawiatura': 'elektronika',
+    'krzesło': 'meble',
+    'biurko': 'meble'
+}
+
+odwrotny_slownik = {}
+
+for produkt, kategoria in produkty.items():
+    lista_kluczy_z_kategorii = odwrotny_slownik.get(kategoria, [])
+    lista_kluczy_z_kategorii.append(produkt)
+    odwrotny_slownik[kategoria] = lista_kluczy_z_kategorii
+
+print(odwrotny_slownik)
