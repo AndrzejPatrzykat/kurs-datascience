@@ -10,3 +10,4 @@ for i in range(len(wagi)):
     else:
         kat = 'nadwaga'
     print(f"waga: {wagi[i]}, wzrost: {wzrosty[i]:.2f}, BMI  {BMI:.2f}, {kat:<9}")
+    print("Hurrra")
